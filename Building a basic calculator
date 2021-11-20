@@ -1,0 +1,11 @@
+import "dart:math";
+
+void main() {
+  print("Enter a number:");
+  double num1 = double.parse(stdin.readLineSync());
+  
+  print("Enter a number:");
+  double num2 = double.parse(stdin.readLineSync());
+  
+  print(num1 + num2);
+};
