@@ -1,0 +1,37 @@
+Concepts:
+Classes & Objects
+Constructors
+Class Methods
+
+
+Codes:
+
+
+
+import "dart:io";
+
+class Book {
+
+  Book(String aTitle, String aAuthor, int aNumPages) {
+    this.title = aTitle;
+    this.author = aAuthor;
+    this.numPages = aNumPages;
+  }
+
+  String title;
+  String author;
+  int numPages;
+  
+}
+
+
+void main() {
+
+  Book hp = Book("Chamber of Secrets", "JK Rowling", 288);
+  Book lotr = Book("Fellowship of the Ring", "JRR Tolkien", 423);
+
+
+  print(hp.author);
+  print(lotr.title);
+
+}
