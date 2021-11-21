@@ -1,0 +1,55 @@
+
+//In this game, you answer 3 questions and your answers will be scored.
+
+Codes:
+
+import "dart:math";
+import "dart:io";
+
+
+double promptDouble(String promptText) {
+  print(promptText);
+  double myNum = double.parse(stdin.readLineSync());
+  return myNum;
+
+}
+
+class MathQuestion {
+
+  String question;
+  double answer;
+
+  MathQuestion(String aQuestion, double aAnswer) {
+    this.question = aQuestion;
+    this.answer = aAnswer;
+  
+  }
+
+
+}
+
+
+void main() {
+
+  List<MathQuestion> questions = [
+  
+    MathQuestion("2 + 3", 5.0),
+    MathQuestion("12 - 5", 7.0),
+    MathQuestion("23 * 7", 144.0),
+  
+  ];
+
+  int score = 0;
+
+
+  for(MathQuestion mathQuestion in questions) {
+    double userAnswer = promptDouble(mathQuestion.question);
+    if(userAnswer == mathQuestion.answer) {
+      score++;
+    } 
+    
+    }
+
+    print("You got ${score}/${questions.length}");
+
+    }
