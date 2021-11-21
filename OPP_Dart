@@ -25,6 +25,7 @@ class Book {
     this.numPages = aNumPages;
   }
 
+//initializing variables
   String title;
   String author;
   int numPages;
