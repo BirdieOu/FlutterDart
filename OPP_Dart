@@ -1,17 +1,24 @@
 Concepts:
-Classes & Objects
-Constructors
-Class Methods
+Classes & Objects 
+-Classes are used to customize data types.
+-Objects: acutally objects to be created (so much like the physical objects in the real world)
+Constructors: imagine them as molds to create objects (including different kinds of data for your customerization)
+Class Methods: a class method is a function inside a class.  
 
 
 Codes:
 
-
+Example 1:
+/*
+Create a book catalogue. HP Chamber of Secrets; LOTR: Fellowship of the Ring
+*?
 
 import "dart:io";
 
+//creating class
 class Book {
 
+//creating a constructor
   Book(String aTitle, String aAuthor, int aNumPages) {
     this.title = aTitle;
     this.author = aAuthor;
@@ -27,11 +34,51 @@ class Book {
 
 void main() {
 
+//creating objects
   Book hp = Book("Chamber of Secrets", "JK Rowling", 288);
   Book lotr = Book("Fellowship of the Ring", "JRR Tolkien", 423);
 
-
+//printing out some book related details
   print(hp.author);
   print(lotr.title);
+
+}
+
+
+Example 2:
+//Student records with names and GPAs.Check whether the students' GPAs are over 2.0.
+//Class Methods
+
+import "dart:math";
+import "dart:io";
+
+
+class Student {
+  String name;
+  double gpa;
+
+  Student(String aName, double aGpa) {
+    this.name = aName;
+    this.gpa = aGpa;
+  
+  }
+
+  bool hasHonors() {
+    return this.gpa >= 2.0;
+
+  }
+
+
+}
+
+
+void main() {
+
+//creating variable
+  Student jack = Student("Jack", 2.5);
+  Student jill = Student("Jill", 3.7);
+  
+  print(jack.hasHonors());
+  print(jill.hasHonors());
 
 }
